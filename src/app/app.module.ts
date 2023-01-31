@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersComponent, children: [
     { path: ':id/:name', component: UserComponent},
   ]},
-  { path: 'not-found', component: PageNotFoundComponent }
+  { path: 'not-found', component: PageNotFoundComponent },
   { path: 'something', redirectTo: '/not-found' }
 ];
 
