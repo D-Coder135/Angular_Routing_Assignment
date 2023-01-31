@@ -24,4 +24,8 @@ export class ServerComponent implements OnInit {
     );
   }
 
+  onEdit() {
+    
+  }
+
 }
