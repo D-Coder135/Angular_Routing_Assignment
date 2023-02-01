@@ -13,6 +13,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent},
@@ -42,6 +43,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     FormsModule,
     // RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ServersService],
   bootstrap: [AppComponent]
