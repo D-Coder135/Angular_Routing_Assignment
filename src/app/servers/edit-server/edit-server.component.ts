@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { ServersService } from '../servers.service';
 import { CanComponentDeactivate } from './can-deactivate-guard.service';
@@ -36,6 +37,10 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
     this.serversService.updateServer(this.server.id, {name: this.serverName, status: this.serverStatus});
     this.changesSaved = true;
     this.router.navigate(['../'], {relativeTo: this.route});
+  }
+
+  canDeactivate() : Observable<boolean> | Promise<boolean> | boolean {
+    
   }
 
 }
