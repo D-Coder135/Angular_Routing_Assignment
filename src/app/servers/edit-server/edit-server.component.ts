@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { ServersService } from '../servers.service';
+import { CanComponentDeactivate } from './can-deactivate-guard.service';
 
 @Component({
   selector: 'app-edit-server',
   templateUrl: './edit-server.component.html',
   styleUrls: ['./edit-server.component.css']
 })
-export class EditServerComponent implements OnInit {
+export class EditServerComponent implements OnInit, CanComponentDeactivate {
   server: {id: number, name: string, status: string};
   serverName = '';
   serverStatus = '';
